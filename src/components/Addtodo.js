@@ -1,6 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import {addTodo} from '../action/index';
+import { connect } from "react-redux";
 
 const Addtodo = (props) => {
   const submitHandler = (e) => {
@@ -21,9 +21,5 @@ const Addtodo = (props) => {
     </div>
   );
 };
-
-// const mapStateToProps = (state) => {
-//     return {data:state.todo.data}
-// };
 
 export default connect()(Addtodo);

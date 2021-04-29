@@ -12,7 +12,10 @@ const initalState = {
           }
         ]};
       case 'DELETE_TODO':
-        return {};
+        const todos = state.data.filter((todo)=>{
+          return todo.id!==action.id
+        })
+        return {...state,data:todos};
       default:
         return state;
     }
